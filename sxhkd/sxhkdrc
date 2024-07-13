@@ -31,9 +31,6 @@ XF86AudioMute
 super + {_,shift + }{Left,Down,Up,Right}
 	bspc node -{f,s} {west,south,north,east}
 
-super + shift + f
-	bspc node -t \~fullscreen
-
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
@@ -50,7 +47,7 @@ super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 super + space
-	bspc desktop -l next
+	bspc node -t \~fullscreen
 
 super + Escape
 	pkill -USR1 -x sxhkd
