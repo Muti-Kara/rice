@@ -52,6 +52,5 @@ super + space
 super + Escape
 	pkill -USR1 -x sxhkd
 
-super + shift + e
-	bspc quit
-
+super + shift + {e,r}
+	bspc {quit,wm -r}

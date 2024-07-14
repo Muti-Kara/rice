@@ -1,0 +1,20 @@
+bspwm
+kitty
+picom
+polybar
+dunst
+feh
+neovim
+dmenu
+ly
+cmatrix
+sxhkd
+otf-font-awesome
+xcursor-breeze
+lxappearance # set the theme
+xorg-xinput
+bluez
+bluez-utils # use bluetoothctl
+networkmanager
+brigthnessctl
+libinput-gestures

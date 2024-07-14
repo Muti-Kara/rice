@@ -1,5 +1,6 @@
 cp bashrc ~/.bashrc
 cp Xresources ~/.Xresources
+cp libinput-gestures.conf ~/.config
 cp -r ./bspwm ~/.config
 cp -r ./sxhkd ~/.config
 cp -r ./polybar ~/.config
