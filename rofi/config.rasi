@@ -1,0 +1,4 @@
+configuration {
+    dpi: 192;
+}
+@theme "fancy_nord"

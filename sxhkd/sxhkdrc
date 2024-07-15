@@ -5,7 +5,7 @@ super + t
 	kitty
 
 super + d
-	dmenu_run
+	rofi -show drun
 
 super + b
 	firefox

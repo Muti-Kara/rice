@@ -1,0 +1,257 @@
+* {
+    selected-normal-foreground: rgba(236, 239, 244, 100%); // Nord6
+    foreground: rgba(236, 239, 244, 100%); // Nord6
+    normal-foreground: @foreground;
+    alternate-normal-background: rgba(59, 66, 82, 0%); // Nord1 transparent
+    selected-urgent-foreground: rgba(236, 239, 244, 100%); // Nord6
+    urgent-foreground: rgba(191, 97, 106, 100%); // Nord11
+    alternate-urgent-background: rgba(59, 66, 82, 0%); // Nord1 transparent
+    active-foreground: rgba(163, 190, 140, 100%); // Nord14
+    lightbg: rgba(229, 233, 240, 100%); // Nord5
+    selected-active-foreground: rgba(163, 190, 140, 100%); // Nord14
+    alternate-active-background: rgba(59, 66, 82, 0%); // Nord1 transparent
+    background: rgba(46, 52, 64, 93%); // Nord0
+    bordercolor: rgba(76, 86, 106, 100%); // Nord3
+    alternate-normal-foreground: @foreground;
+    normal-background: rgba(59, 66, 82, 0%); // Nord1 transparent
+    selected-normal-background: rgba(34, 46, 64, 100%); // Darker Nord0
+    separatorcolor: rgba(136, 192, 208, 100%); // Nord9
+    urgent-background: rgba(59, 66, 82, 0%); // Nord1 transparent
+    selected-urgent-background: rgba(191, 97, 106, 100%); // Nord11
+    alternate-urgent-foreground: @urgent-foreground;
+    background-color: transparent;
+    alternate-active-foreground: @active-foreground;
+    active-background: rgba(59, 66, 82, 0%); // Nord1 transparent
+    selected-active-background: rgba(34, 46, 64, 100%); // Darker Nord0
+}
+window {
+    border-color: rgba(59, 66, 82, 30%); // Nord1
+    background-color: rgba(67, 76, 94, 95%); // Nord2
+    border: 2px;
+    padding: 0px;
+    border-radius: 10px;
+    padding: 0.5em;
+    spacing: 0px;
+    anchor: north;
+    location: center;
+    y-offset: -15.5em;
+    children: [ inputbar, message, wrapper-mode-switcher, listview, pagerbox ];
+}
+
+message {
+    text-color: rgba(76, 86, 106, 100%); // Nord3
+    background-color: rgba(229, 233, 240, 50%); // Nord5
+    border-color: rgba(76, 86, 106, 100%); // Nord3
+    border: 2px;
+    border-radius: 5px;
+    padding: 4px;
+    margin: 0px 0px 0.5em;
+    expand: false;
+}
+
+listview {
+    spacing: 2px;
+    scrollbar: false;
+    padding: 0.5em;
+    background-color: rgba(34, 46, 64, 50%); // Darker Nord0
+    expand: true;
+    border: 0px 2px 2px;
+    border-color: rgba(136, 192, 208, 100%); // Nord9
+    border-radius: 0px 0px 10px 10px;
+}
+
+element.normal.normal {
+    background-color: rgba(46, 52, 64, 100%); // Nord0
+    text-color: rgba(216, 222, 233, 100%); // Nord6
+}
+
+element.selected.normal {
+    border: 2;
+    border-color: rgba(163, 190, 140, 80%); // Nord14
+    background-color: rgba(76, 86, 106, 100%); // Nord3
+    text-color: rgba(236, 239, 244, 100%); // Nord6
+}
+
+pagerbox {
+    expand: false;
+    orientation: horizontal;
+    children: [ icon-left, pad, icon-right ];
+}
+
+pad {
+  expand: true;
+}
+icon-left {
+    expand: false;
+    filename: "go-previous";
+    size: 24;
+    vertical-align: 0.5;
+    action: "kb-page-prev";
+}
+
+icon-right {
+    expand: false;
+    filename: "go-next";
+    size: 24;
+    vertical-align: 0.5;
+    action: "kb-page-next";
+}
+
+
+
+wrapper-mode-switcher {
+    orientation: horizontal;
+
+    expand:     false;
+    spacing:    0;
+    children: [ icon-ms-ic1, mode-switcher, icon-ms-ic2 ];
+}
+icon-ms-ic1 {
+    filename: "go-previous";
+}
+icon-ms-ic2 {
+    filename: "go-next";
+}
+icon-ms-ic1,icon-ms-ic2 {
+    size: 16;
+    vertical-align: 0.8;
+    expand:        false;
+    border:       0px 0px 2px ;
+    border-color: @separatorcolor;
+}
+
+mode-switcher {
+    border:  0px;
+    spacing: 0px;
+    expand: true;
+}
+
+button {
+    padding:      2px;
+    border:       0px 0px 2px ;
+    border-color: @separatorcolor;
+}
+button selected.normal {
+    text-color: white;
+    background-color: black/50%;
+
+    border:       2px 2px 0px ;
+    border-color: @separatorcolor;
+    border-radius:    10px 10px 0 0;
+}
+
+
+sidebar {
+    expand: false;
+}
+
+element {
+    border:  1;
+    border-color: transparent;
+    padding: 4px ;
+}
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}
+element.normal.urgent {
+    background-color: @urgent-background;
+    text-color:       @urgent-foreground;
+}
+element.normal.active {
+    background-color: @active-background;
+    text-color:       @active-foreground;
+}
+element.selected.urgent {
+    border:  1;
+    border-color: grey/80%;
+    background-color: @selected-urgent-background;
+    text-color:       @selected-urgent-foreground;
+}
+element.selected.active {
+    border:  1;
+    border-color: grey/80%;
+    background-color: @selected-active-background;
+    text-color:       @selected-active-foreground;
+}
+element.alternate.normal {
+    background-color: @alternate-normal-background;
+    text-color:       @alternate-normal-foreground;
+}
+element.alternate.urgent {
+    background-color: @alternate-urgent-background;
+    text-color:       @alternate-urgent-foreground;
+}
+element.alternate.active {
+    background-color: @alternate-active-background;
+    text-color:       @alternate-active-foreground;
+}
+scrollbar {
+    width:        4px ;
+    border:       0;
+    handle-width: 8px ;
+    padding:      0;
+}
+sidebar {
+    border:       2px 0px 0px ;
+    border-color: @separatorcolor;
+}
+inputbar {
+    text-color: rgba(46, 52, 64, 100%); // Nord0, dark bluish-gray
+    padding: 0px 0px 0.5em;
+}
+case-indicator {
+    text-color: @normal-foreground;
+}
+
+wrapper {
+    orientation: horizontal;
+    text-color:       black;
+    background-color: white / 70%;
+    border-color:     grey;
+
+    border: 2px;
+    border-radius: 5px;
+    padding: 4px;
+    children:   [ icon-k, entry, icon-paste];
+    spacing:  0.5em;
+}
+button-paste {
+    expand: false;
+    str: "gtk-paste";
+    size: 24;
+    vertical-align: 0.5;
+    action: "kb-cancel";
+}
+icon-paste {
+    expand: false;
+    filename: "gtk-paste";
+    size: 24;
+    vertical-align: 0.5;
+    action: "kb-primary-paste";
+}
+icon-k {
+    expand: false;
+    filename: "input-keyboard";
+    size: 24;
+    vertical-align: 0.5;
+
+}
+entry {
+    vertical-align: 0.5;
+    /* Assuming you want to keep the background light for visibility, set a light background color */
+    background-color: rgba(236, 239, 244, 100%); // Nord6, lightest bluish-gray
+    text-color: rgba(46, 52, 64, 100%); // Nord0, for text
+}
+inputbar {
+    children:   [ wrapper ];
+}
+
+error-message {
+    background-color: darkred/10%;
+    border-color: darkred;
+    border-radius: 10px;
+    border: 2px;
+    padding: 0.5em;
+
+}

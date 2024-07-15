@@ -6,6 +6,7 @@ cp -r ./sxhkd ~/.config
 cp -r ./polybar ~/.config
 cp -r ./kitty ~/.config
 cp -r ./picom ~/.config
+cp -r ./rofi ~/.config
 
 
 if [ "$EUID" == 0 ]; then
