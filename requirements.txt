@@ -1,20 +1,16 @@
-bspwm
+hyprland
+hyprpaper
 kitty
-picom
 polybar
 dunst
-feh
 neovim
 rofi
 ly
 cmatrix
-sxhkd
 otf-font-awesome
 xcursor-breeze
 lxappearance # set the theme
-xorg-xinput
 bluez
 bluez-utils # use bluetoothctl
 networkmanager
 brigthnessctl
-libinput-gestures
