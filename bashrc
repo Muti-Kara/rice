@@ -21,6 +21,7 @@ bind "TAB:menu-complete"
 alias la='ls -lhaG --color=auto'
 alias ll='ls -lhG --color=auto'
 alias ls='ls --color=auto'
+alias tree='tree -C'
 
 alias vim="nvim"
 

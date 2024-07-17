@@ -12,7 +12,11 @@ bspc config split_ratio          0.6
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
+xrandr --output eDP-1 --mode 2880x1800 --rate 120.00
+
 xinput set-prop "12" "Coordinate Transformation Matrix" 2 0 0 0 2 0 0 0 1
+xinput set-prop "12" "libinput Accel Speed" 0.25
+
 
 export XCURSOR_SIZE=32
 xsetroot -cursor_name left_ptr
