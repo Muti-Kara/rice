@@ -1,0 +1,44 @@
+[wofi]
+show-icons=true
+dmenu=true
+width=50%
+height=50%
+border-width=2
+border-radius=10
+padding=5
+font="Sans 12"
+hide-search=true
+
+[styles]
+window.background=rgba(67, 76, 94, 95%)
+window.border=rgba(59, 66, 82, 30%)
+
+entry.background=rgba(236, 239, 244, 100%)
+entry.text=rgba(46, 52, 64, 100%)
+
+listview.background=rgba(34, 46, 64, 50%)
+listview.border=rgba(136, 192, 208, 100%)
+listview.border-radius=10
+listview.scrollbar=false
+
+element.normal.background=rgba(46, 52, 64, 100%)
+element.normal.text=rgba(216, 222, 233, 100%)
+
+element.selected.background=rgba(76, 86, 106, 100%)
+element.selected.text=rgba(236, 239, 244, 100%)
+element.selected.border=rgba(163, 190, 140, 80%)
+element.selected.border-width=2
+
+element.urgent.background=rgba(59, 66, 82, 0%)
+element.urgent.text=rgba(191, 97, 106, 100%)
+
+element.active.background=rgba(59, 66, 82, 0%)
+element.active.text=rgba(163, 190, 140, 100%)
+
+message.background=rgba(229, 233, 240, 50%)
+message.text=rgba(76, 86, 106, 100%)
+message.border=rgba(76, 86, 106, 100%)
+message.border-width=2
+message.border-radius=5
+message.padding=4
+
