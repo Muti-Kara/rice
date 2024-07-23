@@ -1,6 +1,6 @@
 {
   "layer": "top", "position": "top",
-  "modules-left": ["clock",  "custom/weather", "memory", "cpu", "temperature", "custom/powerDraw"],
+  "modules-left": ["clock",  "memory", "cpu", "temperature", "custom/powerDraw"],
   "modules-center": [  "hyprland/workspaces"],
   "modules-right": ["hyprland/window", "tray",  "custom/clipboard", "backlight", "bluetooth", "pulseaudio", "network",  "battery" ],
   "reload_style_on_change":true,
@@ -20,10 +20,11 @@
 		"5": "",
 		"6": "",
 		"active": "",
-		"default": "" 
+		"default": "", 
+		"persistent":"󰑊"
 	},
        "persistent-workspaces": {
-         "*": [ 1, 2, 3, 4 ]
+         "*": [ 1, 2, 3, 4, 5, 6 ]
        }
 },
 
@@ -33,13 +34,6 @@
     "activated":"󰈈",
     "deactivated":"󰈉"
   }
-},
-
-"custom/weather": {
-  "format": "{}",
-  "return-type": "json",
-  "exec": "~/.config/waybar/scripts/weather.sh",
-  "interval": 10,
 },
 
 "custom/clipboard":{
