@@ -1,18 +1,16 @@
-cp bashrc ~/.bashrc
-cp Xresources ~/.Xresources
-cp libinput-gestures.conf ~/.config
-cp -r ./hypr ~/.config
-cp -r ./bspwm ~/.config
-cp -r ./sxhkd ~/.config
-cp -r ./polybar ~/.config
-cp -r ./kitty ~/.config
-cp -r ./picom ~/.config
-cp -r ./rofi ~/.config
+cp bashrc /home/yuio/.bashrc
+cp Xresources /home/yuio/.Xresources
+cp libinput-gestures.conf /home/yuio/.config
+cp -r ./bspwm /home/yuio/.config
+cp -r ./sxhkd /home/yuio/.config
+cp -r ./polybar /home/yuio/.config
+cp -r ./kitty /home/yuio/.config
+cp -r ./picom /home/yuio/.config
+cp -r ./rofi /home/yuio/.config
 
 
 if [ "$EUID" == 0 ]; then
 cp etc.X11.xorg.conf.d.30-touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf
-cp etc.X11.xorg.conf.d.20-intel.conf /etc/X11/xorg.conf.d/20-intel.conf
 cp etc.ly.config.ini /etc/ly/config.ini
 echo "For Ly DM run: systemctl restart ly.service"
 fi

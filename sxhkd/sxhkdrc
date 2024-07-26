@@ -8,7 +8,7 @@ super + d
 	rofi -show drun
 
 super + b
-	firefox
+	brave
 
 super + q
 	bspc node -c
