@@ -7,6 +7,7 @@ cp -r ./polybar /home/yuio/.config
 cp -r ./kitty /home/yuio/.config
 cp -r ./picom /home/yuio/.config
 cp -r ./rofi /home/yuio/.config
+cp -r ./dunst /home/yuio/.config
 
 
 if [ "$EUID" == 0 ]; then
