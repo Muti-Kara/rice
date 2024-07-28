@@ -28,6 +28,12 @@ XF86AudioLowerVolume
 XF86AudioMute
 	pactl set-sink-mute 0 toggle 
 
+Print
+	maim ~/pictures/screenshot-$(date +%Y-%m-%d-%H-%M-%S).png -s
+
+super + c
+	clipmenu
+
 super + {_,shift + }{Left,Down,Up,Right}
 	bspc node -{f,s} {west,south,north,east}
 

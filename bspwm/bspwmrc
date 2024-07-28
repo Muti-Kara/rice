@@ -2,7 +2,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d I II III IV V VI VII VIII IX X
+bspc monitor -d I II III IV V VI
 
 bspc config border_width        0
 bspc config window_gap          30
@@ -18,16 +18,31 @@ xinput set-prop "12" "Coordinate Transformation Matrix" 2 0 0 0 2 0 0 0 1
 xinput set-prop "12" "libinput Accel Speed" 0.25
 
 
-export XCURSOR_SIZE=32
+export XCURSOR_SIZE=48
+export XCURSOR_THEME=breeze
+export GTK_CURSOR_THEME=breeze
+export GTK_CURSOR_SIZE=48
+export GDK_SCALE=2
+export GDK_DPI_SCALE=0.5
+export GTK3_MODULES=appmenu-gtk-module
+export XDG_CURRENT_DESKTOP=Unity
+export QT_QPA_PLATFORMTHEME=qt5ct
+export QT_STYLE_OVERRIDE=gtk
+export QT_QPA_PLATFORMTHEME=gtk2
+export CM_LAUNCHER=rofi
+
 xsetroot -cursor_name left_ptr
 xrdb -merge ~/.Xresources
 
 pactl set-sink-mute @DEFAULT_SINK@ toggle && pactl set-sink-mute @DEFAULT_SINK@ toggle
 
+systemctl --user import-environment DISPLAY
+
+clipmenud &
 libinput-gestures-setup start &
 sxhkd &
 picom --config $HOME/.config/picom/picom.conf &
-feh --bg-scale $HOME/.config/wallpaper.jpg &
+feh --bg-scale $HOME/.config/wallpaper.png &
 dunst &
 killall nm-applet && nm-applet &
 $HOME/.config/polybar/launch.sh &
