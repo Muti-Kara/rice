@@ -5,7 +5,8 @@ yay -S bspwm picom polybar dunst feh sxhkd \
        clipmenu lightdm lightdm-slick-greeter \
        lxappearance xorg-xinput bluez bluez-utils \
        networkmanager brightnessctl libinput-gestures \
-       kitty neovim rofi ranger maim seahorse
+       kitty neovim rofi ranger maim seahorse \
+       ripgrep unzip
 
 sudo systemctl enable lightdm.service
 sudo systemctl enable NetworkManager.service

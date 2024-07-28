@@ -15,6 +15,7 @@ rm -rf "$USER_HOME/.config/picom"
 rm -rf "$USER_HOME/.config/rofi"
 rm -rf "$USER_HOME/.config/dunst"
 rm -rf "$USER_HOME/.config/btop"
+rm -rf "$USER_HOME/.config/nvim"
 
 cp bashrc "$USER_HOME/.bashrc"
 cp Xresources "$USER_HOME/.Xresources"
@@ -28,6 +29,7 @@ cp -r ./picom "$USER_HOME/.config/picom"
 cp -r ./rofi "$USER_HOME/.config/rofi"
 cp -r ./dunst "$USER_HOME/.config/dunst"
 cp -r ./btop "$USER_HOME/.config/btop"
+cp -r ./nvim "$USER_HOME/.config/nvim"
 
 chown -R $USER_NAME:$USER_NAME "$USER_HOME/.bashrc"
 chown -R $USER_NAME:$USER_NAME "$USER_HOME/.Xresources"
@@ -50,4 +52,3 @@ fi
 bspc wm -r
 
 echo "Configuration files and directories have been updated."
-

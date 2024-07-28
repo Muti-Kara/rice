@@ -44,10 +44,14 @@ date_text_color='\[\033[97m\]'
 dir_fg_color='\[\033[38;5;34m\]' # match #A3BE8C
 dir_bg_color='\[\033[48;5;34m\]' # match #A3BE8C
 dir_text_color='\[\033[97m\]'
+venv_fg_color='\[\033[38;5;40m\]' # A bright green, match #8FBCBB
+venv_bg_color='\[\033[48;5;40m\]' # Same bright green for background
+venv_text_color='\[\033[97m\]'    # White text
 
 semi_circle_left='◖'
 semi_circle_right='◗'
 
+venv_block="${black_bg}${venv_fg_color}${semi_circle_left}${reset_color}${venv_bg_color}${venv_text_color} \$(parse_venv) ${reset_color}${black_bg}${venv_fg_color}${semi_circle_right}${reset_color}"
 git_block="${black_bg}${git_fg_color}${semi_circle_left}${reset_color}${git_bg_color}${git_text_color} \$(parse_git_branch) ${reset_color}${black_bg}${git_fg_color}${semi_circle_right}${reset_color}"
 date_block="${black_bg}${date_fg_color}${semi_circle_left}${reset_color}${date_bg_color}${date_text_color} \$(current_date) ${reset_color}${black_bg}${date_fg_color}${semi_circle_right}${reset_color}"
 dir_block="${black_bg}${dir_fg_color}${semi_circle_left}${reset_color}${dir_bg_color}${dir_text_color} \w ${reset_color}${black_bg}${dir_fg_color}${semi_circle_right}${reset_color}"
@@ -62,11 +66,25 @@ current_date() {
     date +"%H:%M"
 }
 
+parse_venv() {
+    if [[ -n "$VIRTUAL_ENV" ]]; then
+        echo $(basename "$VIRTUAL_ENV")
+    fi
+}
+
 set_prompt() {
     if git rev-parse --is-inside-work-tree &>/dev/null; then
-        PS1="${date_block} ${git_block} ${dir_block} "
+        if [[ -n "$VIRTUAL_ENV" ]]; then
+            PS1="${venv_block} ${date_block} ${git_block} ${dir_block} "
+        else
+            PS1="${date_block} ${git_block} ${dir_block} "
+        fi
     else
-        PS1="${date_block} ${dir_block} "
+        if [[ -n "$VIRTUAL_ENV" ]]; then
+            PS1="${venv_block} ${date_block} ${dir_block} "
+        else
+            PS1="${date_block} ${dir_block} "
+        fi
     fi
 }
 
