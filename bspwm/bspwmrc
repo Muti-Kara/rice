@@ -42,7 +42,7 @@ clipmenud &
 libinput-gestures-setup start &
 sxhkd &
 picom --config $HOME/.config/picom/picom.conf &
-feh --bg-scale $HOME/.config/wallpaper.png &
+feh --bg-scale /usr/share/backgrounds/wallpaper.png &
 dunst &
 killall nm-applet && nm-applet &
 $HOME/.config/polybar/launch.sh &

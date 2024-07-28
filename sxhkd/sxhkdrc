@@ -32,7 +32,7 @@ Print
 	maim ~/pictures/screenshot-$(date +%Y-%m-%d-%H-%M-%S).png -s
 
 super + c
-	clipmenu
+	CM_LAUNCHER=rofi clipmenu
 
 super + {_,shift + }{Left,Down,Up,Right}
 	bspc node -{f,s} {west,south,north,east}
