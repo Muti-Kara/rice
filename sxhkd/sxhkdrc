@@ -1,14 +1,20 @@
-super + Return
-	kitty
-
 super + t
-	kitty
+    kitty
+
+super + Return
+	kitty nvim
 
 super + d
 	rofi -show drun
 
 super + b
 	brave
+
+super + f
+	kitty ranger
+
+super + s
+	kitty btop
 
 super + q
 	bspc node -c
@@ -36,6 +42,9 @@ super + c
 
 super + {_,shift + }{Left,Down,Up,Right}
 	bspc node -{f,s} {west,south,north,east}
+
+super + {h,l}
+    bspc desktop -f {prev.local,next.local}
 
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
